@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="d-flex container mt-5 flex-column">
+    <div class="d-flex flex-row justify-content-between ">
+        <h1>Nehoda.io</h1>
+        <button type="button" id="addNewInvoice" class="btn btn-warning my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Nová Faktůra
+        </button>
+        <div>
+            <p id="paid">Zaplacené faktůry: </p>
+            <p id="unpaid">Nezaplacené faktůry: </p>
+        </div>
+    </div>
+    <ul class="list-group" id="table"></ul>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nová Faktůra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body input-group gap-2">
+                <input class="form-control" id="name" placeholder="Name of invoice...">
+                <input class="form-control" id="ammount" placeholder="Ammount...">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="saveChanges" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
